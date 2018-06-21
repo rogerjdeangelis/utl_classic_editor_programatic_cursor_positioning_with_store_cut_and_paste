@@ -1,6 +1,7 @@
+
 Classic editor programatic cursor positioning with store cut and paste
 
-Somewhat useless but fun.
+Somewhat useless but fun but perhaps not always repeatable, depends on editor settings.
 
 for editor repositories
 https://tinyurl.com/ya6me6yo
@@ -18,10 +19,12 @@ PROBLEM
 
   FOUR EXAMPLES
 
-    1. Programatically copy text from line 3 column 3 to line 3 column 8 into paste buffer
-    2. Programatically copy a box of text from line 5 column 2 to line 6 column 4
-    3. Copy a block of text from one location to another
-    4. IOTA command macro to add a sequence on numbers to the end of program
+    1. Programatically copy a string of text in line 3 column 3 to line 3 column 8 into paste buffer
+    2. Programatically copy a box of text from line 5 column 2 to line 6 column 4 into paste buffer
+    3. Copy text at ABCD to the end of line into paste buffer
+    4. Copy a block of text from one location to another
+    5. Copy a block of text starting at 'ABCD' and next line to line 83
+    6. IOTA command macro to add a sequence on numbers to the end of program
 
 
 INPUT
@@ -80,8 +83,15 @@ PROCESS
 
     hit ctrl v and the block below will be pasted
 
+ 3. Copy text at ABCD to the end of line into paste buffer
 
- 3. F ABCD;MARK;HOME;down 2;HOME;MARK;HOME;STORE;HOME;UNMARK;
+    F ABCD;MARK;HOME;down 1;HOME;MARK;HOME;STORE;HOME;UNMARK;
+
+     hit ctrl v
+
+       ABCD
+
+ 4. F ABCD;MARK;HOME;down 2;HOME;MARK;HOME;STORE;HOME;UNMARK;
 
     cntrl v
 
@@ -89,10 +99,10 @@ PROCESS
     EFGH
 
 
- 4. F ABCD;MARK;HOME;down 2;HOME;MARK;HOME;STORE;HOME;UNMARK;HOME;83;HOME;PASTE;
+ 5. F ABCD;MARK;HOME;down 2;HOME;MARK;HOME;STORE;HOME;UNMARK;HOME;83;HOME;PASTE;
     Works but is does not always hit 83
 
- 4. iota 10
+ 6. iota 10
 
     the following will appear at the end of your program
 
@@ -139,4 +149,7 @@ PROCESS
     dm "inc 'work.utliotb1.utliotb1.catams'";
 
     %mend iotb;
+
+
+
 
