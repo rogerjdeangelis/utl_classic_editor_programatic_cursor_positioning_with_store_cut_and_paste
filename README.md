@@ -46,7 +46,7 @@ Classic editor programatic cursor positioning with store cut and paste.
     2.   ABCD
          EFGH    in the paste buffer
 
-    3,   The boloc above moved from line 1 col 1 to line 83 col1
+    3,   The block of text above moved from line 1 col 1 to line 83 col1
 
     00083 ABCD
     00084 EFGH
